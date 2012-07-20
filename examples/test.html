@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="../src/iscroll-lite.js"></script>
+    <script type="text/javascript">
+
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('content');
+    }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+
+    </script>
+    <style>
+        html, body {
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #header {
+            position: absolute; z-index: 2;
+            top: 0; left: 0;
+            width: 100%; height: 45px;
+            line-height: 45px;
+            background-color: #d51875;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e));
+            background-image: -moz-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
+            background-image: -o-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
+            padding: 0;
+            color: #eee;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #content {
+            position: absolute;
+            top: 45px; bottom: 48px; left: 0;
+            width: 100%;
+            overflow: auto;
+        }
+
+        #footer {
+            position: absolute; z-index: 2;
+            bottom: 0; left: 0;
+            width: 100%; height: 48px;
+            background-color: #222;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+            background-image: -moz-linear-gradient(top, #999, #666 2%, #222);
+            background-image: -o-linear-gradient(top, #999, #666 2%, #222);
+            padding: 0;
+            border-top: 1px solid #444;
+        }
+
+        li.button {
+            width: 20%;
+            float: left;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div id="header">新闻</div>
+<div id="content">
+
+    <div id="divRss" class="ui-scrollview-view" style="overflow: hidden; position: relative; left: 0px; top: 0px; ">
+        <a href="#" data-transition="slide" class="Item"><img title="73fb58e9jw1dv3521p4kwj"
+                                                              src="http://img01.36krcnd.com/wp-content/uploads/2012/07/73fb58e9jw1dv3521p4kwj.jpeg"
+                                                              alt="" width="579" height="597">
+
+            <div class="ItemTitle">新浪微博正式开始测试信息流广告，商业化进程加快</div>
+            <div class="ItemDate">Friday, July 20, 2012</div>
+            <div class="ItemContent">您可能感兴趣的文章：</div>
+        </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="屏幕快照 2012-07-20 下午12.56.34"
+                                                                            src="http://img03.36krcnd.com/wp-content/uploads/2012/07/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2012-07-20-%E4%B8%8B%E5%8D%8812.56.34.png"
+                                                                            alt="" width="470" height="213">
+
+        <div class="ItemTitle">36氪开放日（7月8号）视频上线</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="Raved"
+                                                                        src="http://img05.36krcnd.com/wp-content/uploads/2012/07/Raved.png"
+                                                                        alt="" width="388" height="459">
+
+        <div class="ItemTitle">信任朋友口味？基于社交网络的Raved要做本地商家及美食推荐的Pinterest</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">
+            “那些排名和呈现不一定是值得信赖的，他们可能会得出一个比较极端的评分。因为大部分人可能要非常讨厌或喜欢一个地方，才会有动力去写一篇评论。而用户需要花功夫审视关于店家的评论，看有多少评论数，并去读它们，才能决定去不去。我们认为用户需要一些不断增长的并来自自己认识和信任的朋友的信息。”您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="dell-ubuntu"
+                                                                        src="http://img01.36krcnd.com/wp-content/uploads/2012/07/dell-ubuntu.jpg"
+                                                                        alt="" width="410" height="406">
+
+        <div class="ItemTitle">Dell正在变成一家开源公司</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="large"
+                                                                        src="http://img02.36krcnd.com/wp-content/uploads/2012/07/large.jpg"
+                                                                        alt="" width="614" height="383">
+
+        <div class="ItemTitle">Instagram是一个浅薄的媒体么？</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="marissa"
+                                                                        src="http://img03.36krcnd.com/wp-content/uploads/2012/07/marissa1.jpg"
+                                                                        alt="" width="500" height="333">
+
+        <div class="ItemTitle">Marissa Mayer的工资公开，100万美元年薪加最高达6000万美元的股票及红利</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">基本年薪100万美金，也就是平均下来月薪83,333.33美元，这跟上任CEO Scott Thomson
+            一样，按月分两次发放，一次在10号，一次在25号。作为激励计划的一部分，如果她能够超额完成目标，她可以得到2－4倍的工资奖励，也就是说，除了基本工资之外，她还能得到2百万到4百万美元的奖励。此外她还能得到一些公司的股票：价值1200万美元的“年度股权奖励（annual
+            equity award）”，包括受限股或者股票期权；价值1400万美元的受限股；以及价值3000万美元的“一次性奖励”股票。您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="BrianChesky_FortuneConference"
+                                                                        src="http://img04.36krcnd.com/wp-content/uploads/2012/07/BrianChesky_FortuneConference.jpg"
+                                                                        alt="" width="640" height="426">
+
+        <div class="ItemTitle">曾四海为家的CEO Brian Chesky：Airbnb今后会比ebay规模更大</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">“如果我们能像订酒店一样去预订别人的房间，那会怎样？”“我们和其他人的区别就在于我们确实遇到过这样的难题(没有可以负担得起的房间)。”您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img
+            title="Vyclone-Screenshot-Crowd-Movies-256x480"
+            src="http://img02.36krcnd.com/wp-content/uploads/2012/07/Vyclone-Screenshot-Crowd-Movies-256x480.jpg"
+            alt="" width="256" height="480">
+
+        <div class="ItemTitle">视频DIY应用Vyclone倡导把视频拼拼凑凑</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="Ubuntu-Web-Apps11"
+                                                                        src="http://img01.36krcnd.com/wp-content/uploads/2012/07/Ubuntu-Web-Apps11.png"
+                                                                        alt="" width="640" height="367">
+
+        <div class="ItemTitle">顺势而为？Ubuntu新功能允许流行的互联网服务及网站像桌面应用一样运行</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="enhanced-buzz-wide-3862-1342646218-6"
+                                                                        src="http://img03.36krcnd.com/wp-content/uploads/2012/07/enhanced-buzz-wide-3862-1342646218-6.jpg"
+                                                                        alt="" width="693" height="333">
+
+        <div class="ItemTitle">最初的iPad原来有这么大（多图）</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="Marketing business sales"
+                                                                        src="http://img05.36krcnd.com/wp-content/uploads/2012/07/Marketingstrategy.jpeg"
+                                                                        alt="" width="424" height="283">
+
+        <div class="ItemTitle">微博营销进入2.0时代：绝不是做粉丝做评论</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">
+            2.0版本的营销重新思考企业与客户的关系，即你不应该寻求让客户成为你的粉丝，而应该回归本原专注于帮客户释疑解决问题，因此2.0版本的营销应该是做客户。您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="MS-and-Yammer"
+                                                                        src="http://img01.36krcnd.com/wp-content/uploads/2012/07/MS-and-Yammer.jpeg"
+                                                                        alt="" width="400" height="279">
+
+        <div class="ItemTitle">微软12亿美元收购Yammer的交易正式完成，Yammer并入Office部门</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">
+            微软欢迎Yammer加入Office部门今天，我们很高兴地宣布收购Yammer的所有条件已经满足，收购交易正式完成。非常欢迎Yammer团队加入到微软Office部门。放眼未来，我们信心满怀。我们期望能够进一步推广Yammer的服务，进一步提升微软交流和协作产品中的社交功能。您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="B2Gworking"
+                                                                        src="http://img02.36krcnd.com/wp-content/uploads/2012/07/B2Gworking.png"
+                                                                        alt="" width="320" height="502">
+
+        <div class="ItemTitle">基于Web标准的Firefox OS已能下载日常构建版，支持在X86桌面环境运行及测试</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="Larry-Page-600x400"
+                                                                        src="http://img01.36krcnd.com/wp-content/uploads/2012/07/Larry-Page-600x400.jpeg"
+                                                                        alt="" width="600" height="400">
+
+        <div class="ItemTitle">Google高级副总裁Nikesh Arora：CEO 拉里·佩奇确已失声，但仍然在管理着公司</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">联合创始人兼CEO拉里·佩奇确实已经失声，但是仍然管理着公司您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="Google+Share-From-SERPS-600x321"
+                                                                        src="http://img02.36krcnd.com/wp-content/uploads/2012/07/Google+Share-From-SERPS-600x321.png"
+                                                                        alt="" width="600" height="321">
+
+        <div class="ItemTitle">整合继续：Google搜索结果旁惊现分享选项，可直接分享链接并评论到Google+</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">从今天开始，我们正在开始一个新的实验，用分享一个链接取代Google
+            搜索中原本的+1按钮，让你更方便地跟你的朋友分享一个网站。…目前这项功能只会显示在英语搜索中。您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="microsoft"
+                                                                        src="http://img02.36krcnd.com/wp-content/uploads/2012/07/microsoft.jpeg"
+                                                                        alt="" width="563" height="316">
+
+        <div class="ItemTitle">收购aQuantive失败，微软第四财季净亏损4.92亿美元</div>
+        <div class="ItemDate">Friday, July 20, 2012</div>
+        <div class="ItemContent">随着我们正迎来一个最令人激动的多产品发布季，这些产品将驱动我们向前发展，并给消费者和合作伙伴带来前所未有的机会。微软今年将发布新的操作系统Windows
+            8、Office、Windows Server、Windows Phone以及其它产品及服务。您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="学生创业 (3)_conew3"
+                                                                        src="http://img02.36krcnd.com/wp-content/uploads/2012/07/%E5%AD%A6%E7%94%9F%E5%88%9B%E4%B8%9A-3_conew3.jpg"
+                                                                        alt="" width="636" height="409">
+
+        <div class="ItemTitle">学生创业者成功须知（五）：找位导师</div>
+        <div class="ItemDate">Thursday, July 19, 2012</div>
+        <div class="ItemContent">Dave
+            Lerner是连续创业家、天使投资人、startupgenome的创始人。他认为现在正处于有史以来最好的学生创业时期，他把这一时期称为是大学创业2.0.为了指导学生进行创业，他发表了系列文章，我们编译如下，供创业学子参考。您可能感兴趣的文章：
+        </div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="Gogobot-feed"
+                                                                        src="http://img02.36krcnd.com/wp-content/uploads/2012/07/Gogobot-feed.png"
+                                                                        alt="" width="454" height="340">
+
+        <div class="ItemTitle">两个月搞定100万用户，社交旅游网站Gogobot发布新版iPhone应用</div>
+        <div class="ItemDate">Thursday, July 19, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="nokia-logo1"
+                                                                        src="http://img03.36krcnd.com/wp-content/uploads/2012/07/nokia-logo1.jpg"
+                                                                        alt="" width="400" height="224">
+
+        <div class="ItemTitle">诺基亚发布2012第二季度财报：净亏损17亿美元，Lumia销量400万部</div>
+        <div class="ItemDate">Thursday, July 19, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a><a href="#newsdetail" data-transition="slide" class="Item"><img title="pocket"
+                                                                        src="http://img04.36krcnd.com/wp-content/uploads/2012/07/pocket.png"
+                                                                        alt="" width="660" height="250">
+
+        <div class="ItemTitle">华丽转身3个月后，支持文本、图片和视频稍后看功能的Pocket获得500万美元投资</div>
+        <div class="ItemDate">Thursday, July 19, 2012</div>
+        <div class="ItemContent">您可能感兴趣的文章：</div>
+    </a></div>
+</div>
+<div id="footer">
+    <ul>
+        <li class="button">a</li>
+        <li class="button">b</li>
+        <li class="button">c</li>
+        <li class="button">d</li>
+        <li class="button">e</li>
+    </ul>
+</div>
+
+</body>
+</html>
